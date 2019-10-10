@@ -18,10 +18,17 @@ struct ContentView: View {
             
             // Call the map view
             MapView()
+                // Set the frame height
                 .frame(height: 300)
+                // Make the view ignore the safe area
+                .edgesIgnoringSafeArea(.top)
             
             // Setup the image
-            CircleImage().offset(y: -130)
+            CircleImage()
+                // Set the offset
+                .offset(y: -130)
+                // Add the padding
+                .padding(.bottom, -130)
             
             // Text views
             VStack(alignment: .leading) {
@@ -35,6 +42,9 @@ struct ContentView: View {
                         .font(.subheadline)
                 }// End HStack
             }.padding()
+            
+            // Add a spacer
+            Spacer()
         }// End Vstack
             
     }
